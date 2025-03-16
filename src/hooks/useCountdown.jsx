@@ -1,11 +1,10 @@
 import { useState } from "react";
 
 const useCountdown = (date) => {
-    const [day, setDay] = useState();
-    const [hour, setHour] = useState();
-    const [minute, setMinute] = useState();
-    const [second, setSecond] = useState();
-
+  const [day, setDay] = useState();
+  const [hour, setHour] = useState();
+  const [minute, setMinute] = useState();
+  const [second, setSecond] = useState();
 
   const countdown = () => {
     const countDate = new Date(date).getTime();

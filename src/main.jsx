@@ -1,4 +1,3 @@
-
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
@@ -8,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./routes/Home.jsx";
 import Countdown from "./routes/Countdown.jsx";
+import { CountdownProvider } from "./context/CountdownContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +28,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <CountdownProvider>
+      <RouterProvider router={router} />
+    </CountdownProvider>
   </StrictMode>
 );
